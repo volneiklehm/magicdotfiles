@@ -19,11 +19,12 @@ alias '..'='cd ..'
 alias '...'='cd ../..'
 alias '....'='cd ../../..'
 alias '.....'='cd ../../../..'
-alias ls="eza --icons"
-alias la="eza --icons -lgha --group-directories-first"
-alias l="eza --icons -lgha --group-directories-first"
-alias ly="eza --icons -lgha --group-directories-first"
-alias lt="eza --icons --tree"
+alias ls="eza"
+alias ll="eza -la"
+alias la="eza  -lgha --group-directories-first"
+alias l="eza -lgha --group-directories-first"
+alias ly="eza -lgha --group-directories-first"
+alias lt="eza --tree"
 alias lta="eza --icons --tree -lgha"
 alias preview="fzf --preview='bat --color=always --style=numbers --theme OneHalfDark {}' --preview-window=down"
 alias fnvim='nvim $(fzf -m --preview="bat --color=always --style=numbers --theme OneHalfDark {}" --preview-window=down)'

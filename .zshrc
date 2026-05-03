@@ -193,6 +193,6 @@ zi light marlonrichert/zsh-autocomplete
 
 unset ZI_REPO ZI_REPO
 # Load theme
-source "/data/data/com.termux/files/home/.zsh-themes/td.zsh-theme"
-[[ -f /data/data/com.termux/files/home/.shell_rc_content ]] && source /data/data/com.termux/files/home/.shell_rc_content
-[[ -f /data/data/com.termux/files/home/.aliases ]] && source /data/data/com.termux/files/home/.aliases
+source "$HOME/.zsh-themes/td.zsh-theme"
+[[ -f $HOME/.shell_rc_content ]] && source $HOME/.shell_rc_content
+[[ -f $HOME/.aliases ]] && source $HOME/.aliases
