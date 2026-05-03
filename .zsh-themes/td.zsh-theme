@@ -21,17 +21,17 @@ else
 fi
 
 case "$distro_id" in
-  kali) DISTRO_ICON="" ;;   # Kali Linux
-  arch*) DISTRO_ICON="" ;;   # Arch Linux
-  ubuntu) DISTRO_ICON="" ;; # Ubuntu
-  debian) DISTRO_ICON="" ;; # Debian
-  fedora) DISTRO_ICON="" ;; # Fedora
-  alpine) DISTRO_ICON="" ;; # Alpine
-  void) DISTRO_ICON="" ;;   # Void Linux
-  opensuse*|sles) DISTRO_ICON="" ;; # openSUSE
-  gentoo) DISTRO_ICON="" ;; # Gentoo
-  nixos) DISTRO_ICON="" ;; # NixOS
-  *) DISTRO_ICON="" ;;      # Default Linux Icon
+  kali) DISTRO_ICON="@" ;;   # Kali Linux
+  arch*) DISTRO_ICON="@" ;;   # Arch Linux
+  ubuntu) DISTRO_ICON="@" ;; # Ubuntu
+  debian) DISTRO_ICON="@" ;; # Debian
+  fedora) DISTRO_ICON="@" ;; # Fedora
+  alpine) DISTRO_ICON="@" ;; # Alpine
+  void) DISTRO_ICON="@" ;;   # Void Linux
+  opensuse*|sles) DISTRO_ICON="@" ;; # openSUSE
+  gentoo) DISTRO_ICON="@" ;; # Gentoo
+  nixos) DISTRO_ICON="@" ;; # NixOS
+  *) DISTRO_ICON="@" ;;      # Default Linux Icon
 esac
 
 # Symbols
