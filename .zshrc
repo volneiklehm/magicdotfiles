@@ -9,6 +9,10 @@ setopt AUTO_CD
 # Turn off "no match" errors
 setopt nonomatch
 
+# Fix encoding issues that cause text overlapping
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 # -------------------------------------------
 # Edit Command Buffer
 # -------------------------------------------
@@ -149,7 +153,7 @@ compctl -K _pip_completion pip3
 # -----------------------------------------------------------------------------
 
 # Enhanced completions - Additional completion definitions
-zi ice zsh-users/zsh-completions
+zi light zsh-users/zsh-completions
 
 # Auto-suggestions - Suggests commands as you type based on history
 zi ice atload'_zsh_autosuggest_start' \
@@ -159,19 +163,19 @@ bindkey "^_" autosuggest-execute
 bindkey "^ " autosuggest-accept'
 zi light zsh-users/zsh-autosuggestions
 
-# Fast syntax highlighting - Real-time command syntax validation
-zi light-mode for \
-    $ZI_REPO/fast-syntax-highlighting
-
-
 # FZF history search - Fuzzy search through command history
-zi ice joshskidmore/zsh-fzf-history-search
+zi light joshskidmore/zsh-fzf-history-search
 
 # Zsh autocomplete - Real-time type-ahead autocompletion
 zi ice atload'
 bindkey              "^I" menu-select
 bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete'
 zi light marlonrichert/zsh-autocomplete
+
+# Fast syntax highlighting - Real-time command syntax validation
+# IMPORTANT: Syntax highlighting MUST be the last plugin loaded
+zi light-mode for \
+    $ZI_REPO/fast-syntax-highlighting
 
 # -----------------------------------------------------------------------------
 # FINALIZATION
@@ -197,4 +201,3 @@ source "$HOME/.zsh-themes/td.zsh-theme"
 [[ -f $HOME/.shell_rc_content ]] && source $HOME/.shell_rc_content
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
 export PATH=~/python_venv/bin:~/bin/android-studio/bin:~/bin/scrcpy:$PATH
-

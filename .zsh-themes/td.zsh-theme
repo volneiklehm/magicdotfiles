@@ -35,7 +35,7 @@ case "$distro_id" in
 esac
 
 # Symbols
-PROMPT_SYMBOL="%F{green}❯%F{reset}"
+PROMPT_SYMBOL="%F{green}❯%f%b"
 
 # Check if running in Termux and set username accordingly
 if [[ -n "$PREFIX" && "$PREFIX" == */com.termux/* ]]; then
@@ -52,8 +52,8 @@ dir_display="%F{blue}[%F{yellow}%~%F{blue}]%f"
 
 # Prompt layout (P10K-like)
 PROMPT='
-%B%F{green}╭─ $user_host $dir_display${vcs_info_msg_0_}
-%B%F{green}╰─${PROMPT_SYMBOL} %F{reset}'
+%B%F{green}╭─%b $user_host $dir_display${vcs_info_msg_0_}
+%B%F{green}╰─%b${PROMPT_SYMBOL} '
 
 # Right prompt shows exit status of previous command
 RPROMPT="$exit_status"
