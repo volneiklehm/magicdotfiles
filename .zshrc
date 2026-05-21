@@ -196,3 +196,5 @@ unset ZI_REPO ZI_REPO
 source "$HOME/.zsh-themes/td.zsh-theme"
 [[ -f $HOME/.shell_rc_content ]] && source $HOME/.shell_rc_content
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
+export PATH=~/python_venv/bin:~/bin/android-studio/bin:~/bin/scrcpy:$PATH
+
