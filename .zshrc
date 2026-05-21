@@ -155,13 +155,14 @@ compctl -K _pip_completion pip3
 # Enhanced completions - Additional completion definitions
 zi light zsh-users/zsh-completions
 
-# Auto-suggestions - Suggests commands as you type based on history
-zi ice atload'_zsh_autosuggest_start' \
-    atinit'
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
-bindkey "^_" autosuggest-execute
-bindkey "^ " autosuggest-accept'
-zi light zsh-users/zsh-autosuggestions
+# NOTE: zsh-autosuggestions is commented out because zsh-autocomplete
+# provides its own autosuggestions. Using both simultaneously locks the keyboard!
+# zi ice atload'_zsh_autosuggest_start' \
+#     atinit'
+# ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
+# bindkey "^_" autosuggest-execute
+# bindkey "^ " autosuggest-accept'
+# zi light zsh-users/zsh-autosuggestions
 
 # FZF history search - Fuzzy search through command history
 zi light joshskidmore/zsh-fzf-history-search
@@ -172,10 +173,10 @@ bindkey              "^I" menu-select
 bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete'
 zi light marlonrichert/zsh-autocomplete
 
-# Fast syntax highlighting - Real-time command syntax validation
-# IMPORTANT: Syntax highlighting MUST be the last plugin loaded
+# Syntax highlighting - Real-time command syntax validation
+# IMPORTANT: Syntax highlighting MUST be the absolute LAST plugin loaded
 zi light-mode for \
-    $ZI_REPO/fast-syntax-highlighting
+    zsh-users/zsh-syntax-highlighting
 
 # -----------------------------------------------------------------------------
 # FINALIZATION
