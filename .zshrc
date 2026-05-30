@@ -52,6 +52,16 @@ autoload -Uz zmv
 # Custom Widgets
 # -------------------------------------------
 
+# Insert pipe character at cursor with Alt+Z
+function insert-pipe() { LBUFFER+='|' }
+zle -N insert-pipe
+bindkey '\ez' insert-pipe
+
+# Insert backslash at cursor with Alt+Shift+Z
+function insert-backslash() { LBUFFER+='\' }
+zle -N insert-backslash
+bindkey '\eZ' insert-backslash
+
 # # Copy current command buffer to clipboard
 # function copy-buffer-to-clipboard() {
 #   echo -n "$BUFFER" | xclip
